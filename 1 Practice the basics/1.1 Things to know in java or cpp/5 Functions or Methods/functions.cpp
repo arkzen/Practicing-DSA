@@ -10,8 +10,17 @@ using namespace std;
 // non parameterised
 // Take two numbers and print its sum
 
- void printname(string s){ 
-    cout<< "Hey "<< s <<endl;
+ //pass by Value
+ void printnamevalue(string s){ 
+   s[0]='A';
+    cout<< "Hey, Pass by "<< s <<endl;
+ }
+
+ //pass by Reference
+ //note that array always pass by ref, you dont need to pass & with it
+ void printnameref(string &s){ 
+      s[0]='A';
+    cout<< "Hey, pass by ref: "<< s <<endl;
  }
 
  int sum(int a,int b){
@@ -20,13 +29,14 @@ using namespace std;
  }
 
 int main(){
-    string name;
+    string name,name2;
     cin>>name;
-    printname(name);
-
-    string name2;
     cin>>name2;
-    printname(name2);
+   printnamevalue(name);
+       cout<< "Hey "<< name <<endl;
+
+   printnameref(name2);
+       cout<< "Hey "<< name2 <<endl;
 
     int e,f,g;
     cin>>e>>f;
