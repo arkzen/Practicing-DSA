@@ -1,16 +1,25 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-
-    int i,j,n;
-    n=5;
-
-    for(i=0;i<n;i++){
+void pattern1(int n){
+    int i,j;
+ for(i=0;i<n;i++){
         for(j=0;j<n;j++){
-            cout<<"*";
+            cout<<"* ";
         }
         cout<<endl;
     }
+}
+
+int main() {
+
+int t,c;
+cin>>t;
+for(c=0;c<t;c++){
+   int n;
+    cin>>n;
+    pattern1(n);
+    cout<<endl;
+}
     return 0;
 }
